@@ -9,7 +9,7 @@ export default function AppBar() {
     <header className="flex py-8 px-6">
       <NavLink
         className={
-          "flex items-center gap-6 uppercase text-2xl mr-auto text-white font-bold hover:text-orange-500 duration-500 active:text-orange-500 focus:text-orange-500 hover:scale-105"
+          "flex items-center gap-6 uppercase text-2xl mr-auto  font-bold hover:text-orange-500 duration-500 active:text-orange-500 focus:text-orange-500 hover:scale-105"
         }
         href="/"
       >
@@ -26,7 +26,7 @@ export default function AppBar() {
           <li>
             <NavLink
               href="/meals"
-              className="flex text-2xl text-white font-bold hover:text-orange-500 duration-500 active:text-orange-500 focus:text-orange-500 hover:scale-105"
+              className="flex text-2xl  font-bold hover:text-orange-500 duration-500 active:text-orange-500 focus:text-orange-500 hover:scale-105"
             >
               Browse Meals
             </NavLink>
@@ -34,7 +34,7 @@ export default function AppBar() {
           <li>
             <NavLink
               href="/community"
-              className="flex text-2xl text-white font-bold  hover:text-orange-500 duration-500 active:text-orange-500 focus:text-orange-500 hover:scale-105"
+              className="flex text-2xl  font-bold  hover:text-orange-500 duration-500 active:text-orange-500 focus:text-orange-500 hover:scale-105"
             >
               Foodies Community
             </NavLink>

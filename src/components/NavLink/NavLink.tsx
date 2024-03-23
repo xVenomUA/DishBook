@@ -13,10 +13,12 @@ export default function NavLink({
 }) {
   const path = usePathname();
   function isActive(pathname: string) {
-    return path === pathname ? "text-orange-500 scale-105" : "text-white";
+    return path == pathname ? "text-orange-500 scale-105" : "text-white";
   }
+
+  
   return (
-    <Link href={href} className={`${isActive(href)} ${className}`}>
+    <Link href={href} className={` ${className} ${isActive(href)}`}>
       {children}
     </Link>
   );
