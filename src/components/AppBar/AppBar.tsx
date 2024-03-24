@@ -6,7 +6,7 @@ import NavLink from "../NavLink/NavLink";
 
 export default function AppBar() {
   return (
-    <header className="flex py-8 px-6">
+    <header className="flex py-6 px-6 max-w-laptop m-margAuto">
       <NavLink
         className={
           "flex items-center gap-6 uppercase text-2xl mr-auto  font-bold hover:text-orange-500 duration-500 active:text-orange-500 focus:text-orange-500 hover:scale-105"

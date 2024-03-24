@@ -14,11 +14,20 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       spacing: {
-        w320: "320px",
+        w40: "31.25rem",
         auto: "auto",
+        h25: "25rem",
+        margAuto: "0 auto",
       },
       zIndex: {
         minus: "-1",
+        plus: "1",
+      },
+      maxWidth: {
+        laptop: "1400px",
+      },
+      colors: {
+        slate: "#ddd6cb",
       },
     },
   },
