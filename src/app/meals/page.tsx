@@ -1,9 +1,7 @@
 import Link from "next/link";
-import { getMeals } from "../../../lib/meals";
 import MealsItem from "@/components/MealsItem/MealsItem";
 
-export default async function Meals() {
-  const meals = await getMeals();
+export default  function Meals() {
 
   return (
     <main className="py-16 px-12 max-w-laptop m-margAuto">
