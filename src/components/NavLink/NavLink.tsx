@@ -12,13 +12,14 @@ export default function NavLink({
   className: string;
 }) {
   const path = usePathname();
-  function isActive(pathname: string) {
-    return path == pathname ? "text-orange-500 scale-105" : "text-white";
-  }
 
-  
   return (
-    <Link href={href} className={` ${className} ${isActive(href)}`}>
+    <Link
+      href={href}
+      className={` ${className} ${
+        path.startsWith(href) ? "text-orange-500 scale-105" : "text-slate"
+      }`}
+    >
       {children}
     </Link>
   );

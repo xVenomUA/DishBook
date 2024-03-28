@@ -18,6 +18,7 @@ const config: Config = {
         auto: "auto",
         h25: "25rem",
         margAuto: "0 auto",
+        h400: "460px",
       },
       zIndex: {
         minus: "-1",
@@ -28,6 +29,7 @@ const config: Config = {
       },
       colors: {
         slate: "#ddd6cb",
+        brown: "#2c1e19",
       },
     },
   },

@@ -1,28 +1,29 @@
-export default function Meals() {
-    return <main>
-        <h1 className="text-4xl font-bold text-center mt-10">Browse Meals</h1>
-        <p className="text-center mt-4">
-            Here you can find all the meals you can imagine.
+import Link from "next/link";
+import { getMeals } from "../../../lib/meals";
+import MealsItem from "@/components/MealsItem/MealsItem";
+
+export default async function Meals() {
+  const meals = await getMeals();
+
+  return (
+    <main className="py-16 px-12 max-w-laptop m-margAuto">
+      <div className=" p-10 h-80">
+        <h1 className="text-slate text-6xl font-bold mb-4">
+          Delicious meals, created{" "}
+          <span className="text-orange-500">by you</span>
+        </h1>
+        <p className="text-slate text-xl mb-12">
+          Choose your favorite recipe and cook it yourself. It is easy and fun!
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-            <div className="bg-white shadow-md rounded-md p-6">
-                <h2 className="text-2xl font-bold">Breakfast</h2>
-                <p className="mt-4">
-                    Start your day with a delicious breakfast.
-                </p>
-            </div>
-            <div className="bg-white shadow-md rounded-md p-6">
-                <h2 className="text-2xl font-bold">Lunch</h2>
-                <p className="mt-4">
-                    Enjoy a tasty lunch.
-                </p>
-            </div>
-            <div className="bg-white shadow-md rounded-md p-6 ">
-                <h2 className="text-2xl font-bold">Dinner</h2>
-                <p className="mt-4">
-                    Finish your day with a delicious dinner.
-                </p>
-            </div>
-        </div>
+
+        <Link
+          href="/meals/share"
+          className="bg-orange-500 p-4 w-44 text-slate text-2xl rounded-2xl font-bold text-center hover:bg-orange-600 transition-colors"
+        >
+          Share Your Favorite Recipe
+        </Link>
+      </div>
+      <MealsItem />
     </main>
-} 
+  );
+}

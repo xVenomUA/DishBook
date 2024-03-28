@@ -7,9 +7,9 @@ import NavLink from "../NavLink/NavLink";
 export default function AppBar() {
   return (
     <header className="flex py-6 px-6 max-w-laptop m-margAuto">
-      <NavLink
+      <Link
         className={
-          "flex items-center gap-6 uppercase text-2xl mr-auto  font-bold hover:text-orange-500 duration-500 active:text-orange-500 focus:text-orange-500 hover:scale-105"
+          "flex items-center gap-6 uppercase text-2xl mr-auto  font-bold text-slate"
         }
         href="/"
       >
@@ -20,7 +20,7 @@ export default function AppBar() {
           className="w-20 h-20 "
         />
         NextLevel Food
-      </NavLink>
+      </Link>
       <nav className=" flex items-center justify-center">
         <ul className="flex gap-10 items-center justify-center">
           <li>

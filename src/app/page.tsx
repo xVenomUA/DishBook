@@ -26,7 +26,7 @@ export default function Home() {
             </Link>
             <Link
               href="/meals"
-              className="py-4 px-2 text-white bg-orange-400 text-xl rounded-3xl hover:bg-orange-500 duration-500"
+              className="py-4 px-2 w-52 text-white bg-orange-400 text-xl rounded-3xl hover:bg-orange-500 duration-500 flex justify-center items-center font-bold tracking-wide uppercase"
             >
               Explore Meals
             </Link>
