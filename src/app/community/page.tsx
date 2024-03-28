@@ -1,29 +1,46 @@
+import Image from "next/image";
 
-export default function Community() {   
-    return <main>
-        <h1 className="text-4xl font-bold text-center mt-10">Foodies Community</h1>
-        <p className="text-center mt-4">
-            Join our community and share your favorite recipes with other foodies.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-            <div className="bg-white shadow-md rounded-md p-6">
-                <h2 className="text-2xl font-bold">Breakfast</h2>
-                <p className="mt-4">
-                    Start your day with a delicious breakfast.
-                </p>
-            </div>
-            <div className="bg-white shadow-md rounded-md p-6">
-                <h2 className="text-2xl font-bold">Lunch</h2>
-                <p className="mt-4">
-                    Enjoy a tasty lunch.
-                </p>
-            </div>
-            <div className="bg-white shadow-md rounded-md p-6">
-                <h2 className="text-2xl font-bold">Dinner</h2>
-                <p className="mt-4">
-                    Finish your day with a delicious dinner.
-                </p>
-            </div>
-        </div>
+import mealIcon from "../../../assets/icons/meal.png";
+import communityIcon from "../../../assets/icons/community.png";
+import eventsIcon from "../../../assets/icons/events.png";
+
+export default function Community() {
+  return (
+    <main className="py-20 px-12 max-w-laptop m-margAuto flex flex-col justify-center items-center text-slate">
+      <h1 className="text-6xl font-bold mb-8">
+        One shared passion: <span className="text-orange-500">Food</span>
+      </h1>
+      <p className="text-2xl mb-10">
+        Join our community and share your favorite recipes!
+      </p>
+      <h2 className=" text-3xl font-bold">Community Perks</h2>
+
+      <ul className="flex flex-col justify-center items-center gap-6 text-3xl font-bold pb-20">
+        <li className="flex flex-col justify-center items-center">
+          <Image
+            src={mealIcon}
+            alt="A delicious meal"
+            className="w-32 h-32 mb-4"
+          />
+          <p>Share & discover recipes</p>
+        </li>
+        <li className="flex flex-col justify-center items-center">
+          <Image
+            src={communityIcon}
+            alt="A crowd of people, cooking"
+            className="w-32 h-32"
+          />
+          <p>Find new friends & like-minded people</p>
+        </li>
+        <li className="flex flex-col justify-center items-center">
+          <Image
+            src={eventsIcon}
+            alt="A crowd of people at a cooking event"
+            className="w-32 h-32"
+          />
+          <p>Participate in exclusive events</p>
+        </li>
+      </ul>
     </main>
+  );
 }
