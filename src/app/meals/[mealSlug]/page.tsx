@@ -1,5 +1,6 @@
 import ItemsDetails from "@/components/ItemsDetails/ItemsDetails";
 import { getMealBySlug } from "../../../../lib/meals";
+import BtnUseRouter from "@/components/BtnUseRouter/BtnUseRouter";
 
 export default function MealsSlug({
   params,
@@ -12,6 +13,7 @@ export default function MealsSlug({
   return (
     <main className="py-8 px-12 max-w-laptop m-margAuto">
       <ItemsDetails dataItem={meal} />
+      <BtnUseRouter />
     </main>
   );
 }

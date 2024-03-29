@@ -1,8 +1,8 @@
 import Link from "next/link";
 import MealsItem from "@/components/MealsItem/MealsItem";
+import { Suspense } from "react";
 
-export default  function Meals() {
-
+export default function Meals() {
   return (
     <main className="py-16 px-12 max-w-laptop m-margAuto">
       <div className=" p-10 h-80">
@@ -21,7 +21,16 @@ export default  function Meals() {
           Share Your Favorite Recipe
         </Link>
       </div>
-      <MealsItem />
+      <Suspense
+        fallback={
+          <div className="text-slate text-3xl text-font-bold text-center">
+            Loading...
+          </div>
+        }
+      >
+        <MealsItem />
+      </Suspense>
+  
     </main>
   );
 }

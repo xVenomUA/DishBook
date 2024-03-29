@@ -1,9 +1,11 @@
 import ImageSlideShow from "@/components/ImageSlideShow/ImageSlideShow";
 import InfoComp from "@/components/InfoComp/InfoComp";
-import Image from "next/image";
+
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
+  
   return (
     <main className="py-8 px-12 max-w-laptop m-margAuto">
       <div className="flex gap-24 mb-10">
