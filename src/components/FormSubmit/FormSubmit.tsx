@@ -1,13 +1,14 @@
 "use client";
 import { useId } from "react";
+import ImagePicker from "../ImagePicker/ImagePicker";
 
 export default function FormSubmit() {
   const nameID = useId();
   const emailID = useId();
   const titleID = useId();
   const shortID = useId();
-    const instructionsID = useId();
-    
+  const instructionsID = useId();
+
   return (
     <>
       <form action="" className="flex flex-col text-slate text-xl px-12">
@@ -19,7 +20,9 @@ export default function FormSubmit() {
             <input
               type="text"
               id={nameID}
-              className="bg-gray p-2 rounded-lg border-2 border-neutral-600 w-96"
+              name="name"
+              className="bg-gray p-2 rounded-lg border-2 border-neutral-600 w-96 "
+              placeholder="Your name"
             />
           </div>
           <div>
@@ -28,8 +31,10 @@ export default function FormSubmit() {
             </label>
             <input
               type="text"
+              name="email"
               id={emailID}
               className="bg-gray p-2 rounded-lg border-2 border-neutral-600 w-96"
+              placeholder="Your email"
             />
           </div>
         </div>
@@ -38,8 +43,10 @@ export default function FormSubmit() {
         </label>
         <input
           type="text"
+          name="title"
           id={titleID}
           className="bg-gray p-2 rounded-lg border-2 border-neutral-600 w-w808 mb-3"
+          placeholder="Title"
         />
         <label htmlFor={shortID} className="mb-2">
           Short Summary
@@ -47,7 +54,9 @@ export default function FormSubmit() {
         <input
           type="text"
           id={shortID}
+          name="short"
           className="bg-gray p-2 rounded-lg border-2 border-neutral-600 w-w808 mb-3"
+          placeholder="Short Summary"
         />
         <label htmlFor={instructionsID} className="mb-2">
           Instructions
@@ -55,8 +64,19 @@ export default function FormSubmit() {
         <textarea
           rows={7}
           id={instructionsID}
+          name="instructions"
           className="bg-gray p-2 rounded-lg border-2 border-neutral-600 w-w808 mb-3"
+          placeholder="Type your instructions here"
         />
+        <ImagePicker name="file" />
+        <div className="flex justify-end w-w808">
+          <button
+            type="submit"
+            className="bg-orange-500 text-slate rounded-md w-60 h-14 font-bold hover:bg-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-500 duration-500"
+          >
+            Submit
+          </button>
+        </div>
       </form>
     </>
   );
