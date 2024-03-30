@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useId, useRef, useState } from "react";
 
 export default function ImagePicker({ name }: { name: string }) {
-  const fileID = useId();
   const [pickImage, setPickImage] = useState<string | null>(null);
   const imageInput = useRef<HTMLInputElement>(null);
 
@@ -24,7 +23,9 @@ export default function ImagePicker({ name }: { name: string }) {
   }
   return (
     <div className="flex flex-col text-slate text-xl mb-6 w-w808">
-      <h3 className="mb-2">Your Image</h3>
+      <label htmlFor="file" className="mb-2">
+        Your Image
+      </label>
       <div className="flex gap-10">
         <div className="w-40 h-40 flex items-center justify-center border-2 rounded-xl">
           {pickImage ? (
@@ -42,6 +43,7 @@ export default function ImagePicker({ name }: { name: string }) {
         <input
           type="file"
           name={name}
+          id="file"
           accept="image/jpeg, image/png"
           className="hidden"
           ref={imageInput}

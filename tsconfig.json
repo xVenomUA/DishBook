@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "lib/meals.js", "lib/action.js", "src/components/FormSubmit/FormSubmit.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "lib/meals.js", "lib/action.js", "src/components/FormSubmit/FormSubmit.tsx", "src/components/ImagePicker/ImagePicker.tsx", "src/app/meals/share/page.tsx"],
   "exclude": ["node_modules"]
 }

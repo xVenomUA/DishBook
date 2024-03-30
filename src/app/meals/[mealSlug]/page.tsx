@@ -2,7 +2,7 @@ import ItemsDetails from "@/components/ItemsDetails/ItemsDetails";
 import { getMealBySlug } from "../../../../lib/meals";
 import BtnUseRouter from "@/components/BtnUseRouter/BtnUseRouter";
 
-export default function MealsSlug({
+export default  function MealsSlug({
   params,
 }: {
   params: { mealSlug: string };
