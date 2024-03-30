@@ -2,16 +2,27 @@
 import { useId } from "react";
 import ImagePicker from "../ImagePicker/ImagePicker";
 
+import { shareMeal } from "../../../lib/action";
+import { log } from "console";
+import { useFormState } from "react-dom";
+interface FormSubmitProps {
+  name: string;
+  email: string;
+  title: string;
+  summary: string;
+  instructions: string;
+  image: string;
+}
 export default function FormSubmit() {
   const nameID = useId();
   const emailID = useId();
   const titleID = useId();
   const shortID = useId();
   const instructionsID = useId();
-
+  
   return (
     <>
-      <form action="" className="flex flex-col text-slate text-xl px-12">
+      <form className="flex flex-col text-slate text-xl px-12" > 
         <div className="flex gap-10">
           <div className="mb-8">
             <label htmlFor={nameID} className="flex flex-col w-32 mb-2 ">
@@ -23,6 +34,7 @@ export default function FormSubmit() {
               name="name"
               className="bg-gray p-2 rounded-lg border-2 border-neutral-600 w-96 "
               placeholder="Your name"
+              required
             />
           </div>
           <div>
@@ -35,6 +47,7 @@ export default function FormSubmit() {
               id={emailID}
               className="bg-gray p-2 rounded-lg border-2 border-neutral-600 w-96"
               placeholder="Your email"
+              required
             />
           </div>
         </div>
@@ -47,6 +60,7 @@ export default function FormSubmit() {
           id={titleID}
           className="bg-gray p-2 rounded-lg border-2 border-neutral-600 w-w808 mb-3"
           placeholder="Title"
+          required
         />
         <label htmlFor={shortID} className="mb-2">
           Short Summary
@@ -54,9 +68,10 @@ export default function FormSubmit() {
         <input
           type="text"
           id={shortID}
-          name="short"
+          name="summary"
           className="bg-gray p-2 rounded-lg border-2 border-neutral-600 w-w808 mb-3"
           placeholder="Short Summary"
+          required
         />
         <label htmlFor={instructionsID} className="mb-2">
           Instructions
@@ -67,8 +82,9 @@ export default function FormSubmit() {
           name="instructions"
           className="bg-gray p-2 rounded-lg border-2 border-neutral-600 w-w808 mb-3"
           placeholder="Type your instructions here"
+          required
         />
-        <ImagePicker name="file" />
+        <ImagePicker name="image" />
         <div className="flex justify-end w-w808">
           <button
             type="submit"
